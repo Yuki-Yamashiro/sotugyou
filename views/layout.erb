@@ -1,0 +1,20 @@
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>YAMA's Page</title> 
+  <link rel="stylesheet" href="/css/custom.css">
+</head>
+<body>
+
+<% if session[:user] %>
+  <form action="/signout" method="post">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="サインアウト">
+  </form>
+<% end %>
+  <h1>ようこそ！YAMAのページへ！</h1>
+  <%= yield %>
+  <script src="/js/custom.js"></script>
+</body>
+</html>
+

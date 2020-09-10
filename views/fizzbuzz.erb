@@ -1,0 +1,12 @@
+
+<% @numbers.each do |num| %>
+  <% if num % 3 == 0 && num % 5 == 0 %>
+    <p><%= "FizzBuzz" %></p>
+  <% elsif num % 3 == 0 %>
+    <p><%= "Fizz" %></p>
+  <% elsif num % 5 == 0 %>
+    <p><%= "Buzz" %></p>
+  <% else %>
+    <p><%= num %></p>
+  <% end %>
+<% end %>
